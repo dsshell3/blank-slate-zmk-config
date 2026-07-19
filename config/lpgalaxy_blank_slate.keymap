@@ -21,7 +21,7 @@
 #define FNC_L 4
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
-&lt { quick_tap_ms = <200>; };
+// &lt { quick_tap_ms = <200>; };
 
 #define BT(n) BT_SEL n
 
@@ -50,14 +50,14 @@
 		compatible = "zmk,behavior-tap-dance";
 		label = "TD_SHIFTY";
 		#binding-cells = <0>;
-		tapping-term-ms = <150>;
+		tapping-term-ms = <200>;
 		bindings = <&kp LSHFT>, <&caps_word>;
 	};
 		SemiQuote: semicolon_singlequote {
 		compatible = "zmk,behavior-tap-dance";
 		label = "TD_SEMIQUOTE";
 		#binding-cells = <0>;
-		tapping-term-ms = <150>;
+		tapping-term-ms = <200>;
 		bindings = <&kp SEMI>, <&kp APOS>;
     };
 	};
@@ -89,7 +89,7 @@
  &kp LSHFT  &kp Z      &kp X      &kp C       &kp D          &kp V          &kp K            &kp H          &kp COMMA   &kp DOT    &kp SEMI      &kp RET
 #endif
 #ifdef TBLE_DUAL_2U
- &kp LCTRL  &kp LGUI   &kp LALT   &mo NUM_L         &mo NAV_L                      &kp SPACE                &mo SYM_L   &kp RALT   &mo FNC_L      &kp RCTRL
+ &kp LCTRL  &kp LGUI   &kp LEFT_ALT   &mo NUM_L         &mo NAV_L                      &kp SPACE                &mo 3   &kp RALT   &mo FNC_L      &kp RCTRL
 #elif defined(TBLE_MIT)
  &kp LCTRL  &mo SYM_L   &kp LGUI  &kp LALT    &mo NAV_L          &kp SPACE                   &mo NUM_L      &kp LEFT    &kp UP     &kp DOWN      &kp RIGHT
 #else
