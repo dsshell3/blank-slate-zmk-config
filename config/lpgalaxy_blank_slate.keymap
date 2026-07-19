@@ -50,28 +50,28 @@
 		compatible = "zmk,behavior-tap-dance";
 		label = "TD_SHIFTY";
 		#binding-cells = <0>;
-		tapping-term-ms = <200>;
+		tapping-term-ms = <250>;
 		bindings = <&kp LSHFT>, <&caps_word>;
 	};
 		SemiQuote: semicolon_singlequote {
 		compatible = "zmk,behavior-tap-dance";
 		label = "TD_SEMIQUOTE";
 		#binding-cells = <0>;
-		tapping-term-ms = <200>;
+		tapping-term-ms = <250>;
 		bindings = <&kp SEMI>, <&kp APOS>;
     };
 	};
 
 // Conditional layer only when we have less thumb keys
-#ifdef TBLE_DUAL_2U
-    cond_layers {
-        compatible = "zmk,conditional-layers";
-	tri {
-	    if-layers = <NUM_L NAV_L>;
-	    then-layer = <SYM_L>;
-        };
-    };
-#endif
+// #ifdef TBLE_DUAL_2U
+//  cond_layers {
+//      compatible = "zmk,conditional-layers";
+//	tri {
+//	    if-layers = <NUM_L NAV_L>;
+//	    then-layer = <SYM_L>;
+//      };
+//    };
+//#endif
 
     keymap {
         compatible = "zmk,keymap";
@@ -89,7 +89,7 @@
  &kp LSHFT  &kp Z      &kp X      &kp C       &kp D          &kp V          &kp K            &kp H          &kp COMMA   &kp DOT    &kp SEMI      &kp RET
 #endif
 #ifdef TBLE_DUAL_2U
- &kp LCTRL  &kp LGUI   &kp LEFT_ALT   &mo NUM_L         &mo NAV_L                      &kp SPACE                &mo 3   &kp RALT   &mo FNC_L      &kp RCTRL
+ &kp LCTRL  &kp LGUI   &kp X   &mo NUM_L         &mo NAV_L                      &kp SPACE                &mo SYM_L   &kp RALT   &mo FNC_L      &kp RCTRL
 #elif defined(TBLE_MIT)
  &kp LCTRL  &mo SYM_L   &kp LGUI  &kp LALT    &mo NAV_L          &kp SPACE                   &mo NUM_L      &kp LEFT    &kp UP     &kp DOWN      &kp RIGHT
 #else
