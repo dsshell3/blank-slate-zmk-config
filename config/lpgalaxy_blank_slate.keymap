@@ -89,7 +89,7 @@
  &kp LSHFT  &kp Z      &kp X      &kp C       &kp D          &kp V          &kp K            &kp H          &kp COMMA   &kp DOT    &kp SEMI      &kp RET
 #endif
 #ifdef TBLE_DUAL_2U
- &kp LCTRL  &kp LGUI   &kp X   &mo NUM_L         &mo NAV_L                      &kp SPACE                &mo SYM_L   &kp RALT   &mo FNC_L      &kp RCTRL
+ &kp LCTRL  &kp LGUI   &kp LALT   &mo NUM_L         &mo NAV_L                      &kp SPACE                &mo SYM_L   &kp RALT   &mo FNC_L      &kp RCTRL
 #elif defined(TBLE_MIT)
  &kp LCTRL  &mo SYM_L   &kp LGUI  &kp LALT    &mo NAV_L          &kp SPACE                   &mo NUM_L      &kp LEFT    &kp UP     &kp DOWN      &kp RIGHT
 #else
@@ -149,7 +149,7 @@
 		fnc_layer {
             label = "Fnc";
             bindings = <
-&trans     &kp F1      &kp F2          &kp F3       &kp F4         &kp F5         &kp F6      &kp F7     &kp F8      &kp F9       &kp F10    &trans
+&kp GRAVE &kp F1      &kp F2          &kp F3       &kp F4         &kp F5         &kp F6      &kp F7     &kp F8      &kp F9       &kp F10    &trans
 &trans    &kp F11      &kp F12         &trans       &trans         &trans         &trans      &trans     &trans      &trans       &trans     &trans
 &trans    &kp CAPS  &kp KP_NUMLOCK    &kp PSCRN    &kp SLCK    &kp PAUSE_BREAK    &kp INS     &trans     &trans      &trans       &trans     &trans
 #ifdef TBLE_DUAL_2U
